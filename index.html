@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Galaxy Defender — Mission</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Galaxy Defender — Mission: Save the Sector</h1>
+    <div class="hud">
+      <div class="chip">Score: <strong id="score">0</strong></div>
+      <div class="chip">Lives: <strong id="lives">3</strong></div>
+      <div class="chip">Kills: <strong id="kills">0</strong>/<strong id="goal">50</strong></div>
+      <div class="controls">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn" class="ghost">Pause</button>
+        <button id="restartBtn" class="ghost">Restart</button>
+      </div>
+    </div>
+  </header>
+
+  <div id="stage">
+    <div id="canvasWrap">
+      <canvas id="game" width="980" height="600"></canvas>
+      <div class="small" style="margin-top:8px">Move mouse left/right — ship follows the guide line. Click or hold mouse to shoot. Destroy <span id="goalLabel">50</span> enemies to win. Remember you have only 3 chances. Let's go!</div>
+    </div>
+
+    <aside>
+      <div class="panel">
+        <div class="stat"><div>Wave</div><div id="wave">1</div></div>
+        <div class="stat"><div>Weapon</div><div id="weapon">Single</div></div>
+        <div class="stat"><div>Power-up</div><div id="power">None</div></div>
+
+        <div style="padding-top:10px">
+          <div style="font-weight:700;margin-bottom:6px">Legend</div>
+          <div class="legend-row"><div class="dot" style="background:linear-gradient(45deg,#ff7b7b,#ff2d55);box-shadow:0 0 12px #ff2d55"></div><div>Enemy (red) — hostile</div></div>
+          <div class="legend-row"><div class="dot" style="background:linear-gradient(45deg,#ffd580,#ffb84d);box-shadow:0 0 12px #ffd580"></div><div>Stronger enemy (amber)</div></div>
+          <div class="legend-row"><div class="dot" style="background:linear-gradient(45deg,#7fffd4,#56ffe6);box-shadow:0 0 14px #56ffe6"></div><div>Power-up (cyan) — pick me!</div></div>
+          <div class="legend-row"><div class="dot" style="background:linear-gradient(45deg,#6bb0ff,#8a6bff);box-shadow:0 0 14px #6bb0ff"></div><div>Boss (purple)</div></div>
+        </div>
+      </div>
+
+      <div style="height:12px"></div>
+      <div class="panel small">
+        <div style="font-weight:700;margin-bottom:6px">Goal</div>
+        <div>Destroy <strong id="goalText">50</strong> enemies. Final boss comes at 50 kills. Victory on final boss defeat.</div>
+      </div>
+
+      <footer>
+        Tip: <strong>Rapid-fire</strong> power-ups make the run much easier.
+      </footer>
+    </aside>
+  </div>
+</div>
+
+<div id="overlay" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;z-index:50">
+  <div id="overlayCard" style="background:rgba(2,4,10,0.9);padding:28px;border-radius:12px;color:#e6fff6;text-align:center">
+    <h2 id="overlayTitle" style="margin:0 0 10px 0"></h2>
+    <div id="overlayText" style="margin-bottom:14px"></div>
+    <div style="display:flex;gap:8px;justify-content:center">
+      <button id="overlayRestart">Restart</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root{
+  --bg1:#02081a; --bg2:#04132a; --panel:#081725;
+  --neon-cyan:#6fffe6; --neon-pink:#ff6bb0; --neon-amber:#ffd580; --muted:#9fded2;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,Arial}
+html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#dff6f0}
+.wrap{max-width:1120px;margin:20px auto;padding:16px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:0 14px 48px rgba(0,0,0,0.6)}
+header{display:flex;align-items:center;justify-content:space-between;padding-bottom:12px}
+h1{margin:0;font-size:20px}
+.hud{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{background:var(--glass);padding:8px 12px;border-radius:10px;font-size:14px;display:flex;gap:8px;align-items:center}
+.controls{display:flex;gap:8px}
+button{background:linear-gradient(90deg,#0ea5a4,#028a89);border:0;padding:8px 12px;border-radius:10px;color:#021;cursor:pointer;font-weight:600}
+button.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+#stage{display:flex;gap:14px}
+#canvasWrap{flex:1;background:linear-gradient(180deg,#021022,#04203a);padding:12px;border-radius:10px;min-width:320px}
+canvas{display:block;border-radius:6px;background:transparent;width:100%;height:auto;max-height:640px;cursor:none}
+aside{width:300px;padding:12px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border-radius:10px;padding:12px}
+.stat{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+.legend-row{display:flex;gap:8px;align-items:center;padding:6px 0}
+.dot{width:18px;height:18px;border-radius:6px;box-shadow:0 0 12px rgba(0,0,0,0.2)}
+.big{font-size:26px;font-weight:700;color:var(--neon-cyan)}
+.small{font-size:13px;color:#bfeee3}
+footer{padding-top:12px;font-size:13px;color:#9fded2}
+.center{display:flex;align-items:center;justify-content:center}
+@media (max-width:920px){aside{display:none}}
