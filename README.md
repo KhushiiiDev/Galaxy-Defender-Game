@@ -14,7 +14,7 @@
 ---
 
 ## ▶️ How to Play the Game
-[Play Galaxy Defender](https://khushiiidev.github.io/Galaxy-Defender---2D-Game/)
+[Play Galaxy Defender](https://khushiiidev.github.io/Galaxy-Defender-Game/)
 
 ---
 
@@ -53,10 +53,6 @@ Game Console
 
 Final Boss Fight
 <img width="1160" height="616" alt="image" src="https://github.com/user-attachments/assets/7e4d565f-8955-4da0-b89c-461916a0f692" />
-
-Victory 
-<img width="1135" height="697" alt="image" src="https://github.com/user-attachments/assets/4b813b39-0c84-4697-b6d1-355898bc1a54" />
-
 
 ---
 
